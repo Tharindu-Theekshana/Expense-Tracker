@@ -9,7 +9,7 @@ export default function ExpenseList() {
 
   return (
     <div>
-      {expenses.length ===0 ? <p>No Expenses</p>:expenses.map((expense, index)=> (<ShowExpenses key={index} expense={expense}/>))}
+      {expenses.length ===0 ? <h1 className='text-4xl text-green-600'>No Expenses</h1>:expenses.map((expense, index)=> (<ShowExpenses key={index} expense={expense}/>))}
     </div>
   )
 }

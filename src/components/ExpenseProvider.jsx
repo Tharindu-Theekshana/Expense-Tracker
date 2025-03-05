@@ -18,10 +18,15 @@ export default function ExpenseProvider({children}) {
         
     }
 
+    const updateExpense = (id,updateData) => {
+        setExpenses(expenses.map((expense) => (expense.id === id ? {...expense, ...updateData}:expense)));
+        
+    }
+
 
   return (
     <div>
-        <ExpenseContext.Provider value={{expenses,addExpenses,removeExpense}}>
+        <ExpenseContext.Provider value={{expenses,addExpenses,removeExpense,updateExpense}}>
              {children}
         </ExpenseContext.Provider>
       

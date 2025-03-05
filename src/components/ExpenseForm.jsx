@@ -26,17 +26,21 @@ export default function ExpenseForm() {
     const [amount,setAmount] = useState();
 
 
+
+
     const whenSubmit = () => {
         
         addExpenses({id: Date.now(), title,amount: parseFloat(amount)});
         setTitle('');
         setAmount('');
     }
+
+   
     
   return (
 <div>
 
-    <h1 class=" text-[54px] text-blue-500" >Expense Tracker</h1>
+  <h1 class=" text-[54px] text-blue-500" >Expense Tracker</h1>
     <div className=" flex justify-center items-center min-h-96 bg-gray-100">
         
       <form onSubmit={handleSubmit(whenSubmit)} className="bg-white p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md">
@@ -52,7 +56,9 @@ export default function ExpenseForm() {
       </form>
     </div>
 
-   
+
     </div>
   )
 }
+
+

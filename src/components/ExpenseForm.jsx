@@ -11,7 +11,7 @@ export default function ExpenseForm() {
 
   const schema = yup.object().shape({
     title: yup.string().required("Title is required."),
-    amount: yup.number().typeError("Please enter a valid number.").positive("Amount must be greater than zero."),
+    amount: yup.number().typeError("Please enter a valid number.").positive("Amount must be greater than zero.").required(),
   });
 
 
@@ -26,11 +26,11 @@ export default function ExpenseForm() {
     const [amount,setAmount] = useState();
 
 
-    const whenSubmit = (e) => {
+    const whenSubmit = () => {
         
-        addExpenses({title,amount: parseFloat(amount)});
+        addExpenses({id: Date.now(), title,amount: parseFloat(amount)});
         setTitle('');
-    setAmount('');
+        setAmount('');
     }
     
   return (

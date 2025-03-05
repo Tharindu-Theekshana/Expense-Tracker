@@ -18,7 +18,7 @@ export default function ExpenseList() {
           <th className='border border-gray-500 px-4 py-4'>Action</th>
         </tr>
         <tbody>
-        {expenses.map((expense, index)=> (<ShowExpenses key={index} expense={expense}/>))}
+        {expenses.map((expense,index)=> (<ShowExpenses key={index} expense={expense}/>))}
       
         
         </tbody>

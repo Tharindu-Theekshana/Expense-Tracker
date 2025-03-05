@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
+import ExpenseProvider, { ExpenseContext } from './ExpenseProvider';
 
 
 export default function ShowExpenses({expense}) {
 
- 
+ const {removeExpense} = useContext(ExpenseContext);
 
   return (
     
@@ -13,7 +14,7 @@ export default function ShowExpenses({expense}) {
             <td className='border border-gray-400 px-4 py-4 flex justify-center gap-4'>
               
               <button className='border p-1 px-3 bg-green-500 hover:bg-green-600 rounded-xl hover:scale-110 transition-transform duration-300'>Update</button>
-              <button className='border p-1 px-3 bg-red-500 hover:bg-red-600 rounded-xl hover:scale-110 transition-transform duration-300'>Delete</button>
+              <button className='border p-1 px-3 bg-red-500 hover:bg-red-600 rounded-xl hover:scale-110 transition-transform duration-300' onClick={()=>removeExpense(expense.id)}>Delete</button>
               
             </td>
       </tr>

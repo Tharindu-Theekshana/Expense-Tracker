@@ -12,10 +12,16 @@ export default function ExpenseProvider({children}) {
         setExpenses([...expenses,expense])
     }
 
+    const removeExpense = (id) => {
+        const newExpense = expenses.filter((expense) => expense.id !== id);
+        setExpenses(newExpense);
+        
+    }
+
 
   return (
     <div>
-        <ExpenseContext.Provider value={{expenses,addExpenses}}>
+        <ExpenseContext.Provider value={{expenses,addExpenses,removeExpense}}>
              {children}
         </ExpenseContext.Provider>
       

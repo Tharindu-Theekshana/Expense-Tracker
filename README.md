@@ -1,13 +1,70 @@
-# React + Vite
+# Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Expense Tracker is a React-based application that helps users manage their expenses by adding, updating, and deleting expense records. It utilizes React Context API for state management and Yup for form validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Add new expenses with a title and amount.
+- Update existing expenses.
+- Delete expenses.
+- Form validation using Yup and React Hook Form.
+- Interactive UI with Tailwind CSS.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Expense-Tracker" 
+## Technologies Used
+
+- React.js
+- React Hook Form
+- Yup (for validation)
+- Tailwind CSS
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/expense-tracker.git
+   cd expense-tracker
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the application:
+   ```sh
+   npm start
+   ```
+
+## Usage
+
+1. Enter an expense title and amount in the form.
+2. Click the "Add Expenses" button to save the expense.
+3. Use the "Edit" button to modify an existing expense and save changes.
+4. Click the "Delete" button to remove an expense.
+
+## Project Structure
+
+```
+expense-tracker/
+│── src/
+│   ├── components/
+│   │   ├── ExpenseForm.js
+│   │   ├── ShowExpenses.js
+│   │   ├── ExpenseProvider.js
+│   ├── App.js
+│   ├── index.js
+│── package.json
+│── README.md
+```
+
+## Contributing
+
+Feel free to contribute by forking the repository and submitting a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Developed by E.M.Tharindu Theekshana
+
+---
